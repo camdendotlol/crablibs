@@ -1,5 +1,6 @@
 use std::{error::Error, io::Write};
 use std::{fs, io};
+use textwrap::{Options, fill, termwidth};
 
 pub struct Config {
   pub filename: String
@@ -82,7 +83,6 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
   let chars = contents.chars();
 
   let mut clues: Vec<Clue> = vec![];
-
   let mut found_clue = false;
   let mut new_clue = String::new();
 
@@ -110,7 +110,9 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
   }
 
   println!("\nHere is the result:");
-  println!("{}", generate_final_text(contents, clues));
+
+  let print_options = Options::new(termwidth());
+  println!("{}", fill(&generate_final_text(contents, clues), print_options));
 
   Ok(())
 }

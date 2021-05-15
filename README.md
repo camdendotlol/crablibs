@@ -12,6 +12,8 @@ The program accepts a template file name as an arguments. For example:
 
 This will make Crablibs take text and prompts from a file called ``template_file.txt``.
 
+There are some example templates in the ``/examples`` folder so you can quickly try it out.
+
 ## The template language
 
 Crablibs uses a very simple template language. Everything in curly braces - ``{`` and ``}`` - is treated as a fill-in-the-blank. Whatever is typed inside the braces will be given to the user as a prompt.
@@ -24,7 +26,7 @@ Stocks surged today as the {capitalized noun} Corporation announced a new {noun}
 
 When you provide this template to the program, you will be prompted to input each term (example input is shown):
 
-```
+```lang-plaintext
 capitalized noun: Potato
 noun: pizza
 singular occupation: plumber
@@ -43,8 +45,8 @@ You can put anything inside the brackets, but the tradition is to use only a [pa
 
 ## Building from source
 
-This project doesn't use any dependencies, so building should be straightforward if you've used Rust before.
+Building should be straightforward if you've used Rust before.
 
 Make sure the [Rust development environment](https://www.rust-lang.org/learn/get-started) is installed.
 
-``git clone`` the repository to a chosen location, and run ``cargo build --release`` to compile a production-ready binary.
+``git clone`` the repository to a chosen location, and run ``cargo build --release`` to compile a production-ready binary. You can also use ``cargo run filename.txt`` to immediately run an unoptimized development build.

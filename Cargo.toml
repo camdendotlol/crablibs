@@ -1,9 +1,10 @@
 [package]
 name = "crablibs"
-version = "1.0.0"
+version = "1.1.0"
 authors = ["Camden Mecklem"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+textwrap = { version = "0.13", features = ["terminal_size"] }
