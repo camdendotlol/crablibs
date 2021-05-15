@@ -1,6 +1,7 @@
 use std::{error::Error, io::Write};
 use std::{fs, io};
 use textwrap::{Options, fill, termwidth};
+use yansi::Paint;
 
 pub struct Config {
   pub filename: String
@@ -35,7 +36,7 @@ impl Clue {
 }
 
 fn get_answer(clue: &String) -> Result<String, Box<dyn Error>> {
-  print!("{}: ", clue);
+  print!("{}: ", Paint::rgb(229, 178, 255, clue));
 
   // Flushing stdout allows us to accept user input on the same line
   io::stdout().flush().unwrap();
@@ -51,6 +52,8 @@ fn get_answer(clue: &String) -> Result<String, Box<dyn Error>> {
 }
 
 fn generate_final_text(text: String, clues: Vec<Clue>) -> String {
+  let answers_to_print: Vec<String> = clues.into_iter().map(|clue| clue.answer.unwrap()).collect();
+
   let chars = text.chars();
   let mut new_chars: Vec<char> = vec![];
   let mut found_clue = false;
@@ -65,7 +68,7 @@ fn generate_final_text(text: String, clues: Vec<Clue>) -> String {
     } else {
       if char == '{' {
         found_clue = true;
-        new_chars.extend(clues[index].answer.as_ref().unwrap().chars());
+        new_chars.extend(answers_to_print[index].chars());
         index = index + 1;
       } else {
         new_chars.push(char);
@@ -109,10 +112,10 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     clue.set_answer(answer);
   }
 
-  println!("\nHere is the result:");
+  println!("{}", Paint::rgb(255, 228, 225, "\n--------------------\n"));
 
   let print_options = Options::new(termwidth());
-  println!("{}", fill(&generate_final_text(contents, clues), print_options));
+  println!("{}", Paint::rgb(182, 252, 213, fill(&generate_final_text(contents, clues), print_options)));
 
   Ok(())
 }

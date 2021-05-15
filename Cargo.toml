@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 textwrap = { version = "0.13", features = ["terminal_size"] }
+yansi = "0.5.0"
