@@ -4,4 +4,4 @@ Here are some facts about the political system in {country name}.
 
 The biggest party is the {noun, capitalized} Party, which supports {adjective} {noun, plural} for everyone and {adjective ending in -er} taxes. They recently had some drama when their chief {noun} {verb, past tense} publicly in Parliament. As a result, they lost {number} seats to the opposition parties.
 
-The second biggest party is the {noun, capitalized} Party. They're famous because their leader is a former {noun} and likes to {verb} at campaign rallies. They want more {noun, plural} in the country due to recent shortages. Recent polls show them {verb ending in -ing} the other parties for the next election. But you never know, politics moves {adverb} over there!
+The second biggest party is the {noun, capitalized} Party. They're famous because their leader is a former {noun} and likes to {verb} at campaign rallies. They want more {noun, plural} in the country due to recent shortages. Recent polls show them {verb ending in -ing} more than the other parties for the next election. But you never know, politics moves {adverb} over there!

@@ -2,4 +2,4 @@ Today, the {noun, capitalized} Programming Language Committee has announced the 
 
 "This is really the most {adjective} I've ever been about a new release" says Hugh {type of food, capitalized}, head {noun} at the project. Other {noun, plural} agreed.
 
-"These new low-level programming languages get better every day," says Tim {type of fruit, capitalized}. "We look forward to {verb ending in -ing} with them in the future."
+"These new low-level programming languages get better every day," says powerful tech CEO Tim {type of fruit, capitalized}. "We look forward to {verb ending in -ing} with them in the future."
