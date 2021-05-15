@@ -14,7 +14,7 @@ This will make Crablibs take text and prompts from a file called ``template_file
 
 ## The template language
 
-Crablibs uses a very simple template language. Everything in curly braces - ``{`` and ``}`` is treated as a fill-in-the-blank. Whatever is typed inside the braces will be given to the user as a prompt.
+Crablibs uses a very simple template language. Everything in curly braces - ``{`` and ``}`` - is treated as a fill-in-the-blank. Whatever is typed inside the braces will be given to the user as a prompt.
 
 For example, a template might look like:
 
