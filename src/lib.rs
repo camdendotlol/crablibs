@@ -49,7 +49,7 @@ fn get_answer(clue: &String) -> Result<String, Box<dyn Error>> {
   Ok(String::from(answer.trim()))
 }
 
-fn display_final_text(text: String, clues: Vec<Clue>) -> () {
+fn generate_final_text(text: String, clues: Vec<Clue>) -> String {
   let chars = text.chars();
   let mut new_chars: Vec<char> = vec![];
   let mut found_clue = false;
@@ -73,9 +73,7 @@ fn display_final_text(text: String, clues: Vec<Clue>) -> () {
   };
 
   let final_text: String = new_chars.into_iter().collect();
-
-  println!("\nHere is the result:");
-  println!("{}", final_text)
+  final_text
 }
 
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
@@ -111,7 +109,8 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     clue.set_answer(answer);
   }
 
-  display_final_text(contents, clues);
+  println!("\nHere is the result:");
+  println!("{}", generate_final_text(contents, clues));
 
   Ok(())
 }
