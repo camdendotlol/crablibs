@@ -20,7 +20,7 @@ impl Config {
   }
 }
 
-pub struct Clue {
+struct Clue {
   hint: String,
   answer: Option<String>
 }
